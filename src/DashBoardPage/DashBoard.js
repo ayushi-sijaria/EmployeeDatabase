@@ -1,18 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EmployeeData from '../data/data'
+import PaginationComponent from '../UI/Pagination/Pagination'
 import classes from './DashBoard.module.css'
 import EmployeeRecord from './EmployeeRecord/EmployeeRecord'
 
 const DashBoard = () => {
+     const [counter, setCounter] = useState(1)
+     const maxCounter = 3
+     const incCounterHandler = () =>
+     {
+          if(counter<maxCounter)
+          setCounter(counter+1)
+     }
+     const decCounterHandler = () =>
+     {
+          if(counter>1)
+          setCounter(counter-1)
+     }
      return (
           <div className={classes.List}>
-               {EmployeeData.map((e) => <EmployeeRecord key={e.id} 
+               {EmployeeData.slice(counter*2-2,counter*2).map((e) => <EmployeeRecord key={e.id} 
                                                         id={e.id}
                                                         name={e.name}
                                                         age={e.age}
                                                         gender={e.gender}
                                                         email={e.email}
                                                         phoneNo={e.phoneNo}/>)}
+               <PaginationComponent onPrev={decCounterHandler} 
+                                    onNext={incCounterHandler}/>
           </div>
      )
 }
