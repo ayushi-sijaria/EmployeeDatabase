@@ -1,0 +1,20 @@
+.Form
+{
+     margin-left: 150px;
+     margin-top: 150px;
+     display: block;
+     border: 1.5px solid #ccc;
+     width: 65%;
+     box-sizing: border-box;
+     border-radius: 5px;
+     background-color: beige;
+}
+.Form div {
+     margin: 15px;
+}
+.Form label {
+     width: 150px;
+}
+.Form button {
+     margin: 2px;
+}
