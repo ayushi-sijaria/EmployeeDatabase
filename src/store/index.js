@@ -1,6 +1,12 @@
 import { createStore } from 'redux'
+import { username, password } from '../data/data'
 
-const reducer = (state={}, action) =>
+const initialState = {
+     username,
+     password
+}
+
+const reducer = (state=initialState, action) =>
 {
      return state
 }

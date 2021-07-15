@@ -1,0 +1,12 @@
+.Employee {
+     width: 50%;
+     border: 2px solid #aaa;
+     margin: 20px;
+     border-radius: 5px;
+     
+}
+
+.Employee:hover
+{
+     background-color: rgb(220, 227, 240);
+}
