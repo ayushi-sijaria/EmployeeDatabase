@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './EmployeeRecord.module.css'
+import employeeImage from '../../Assets/employee.jpg'
 
 const EmployeeRecord = (props) => {
      var employee = props.emp
@@ -7,8 +8,13 @@ const EmployeeRecord = (props) => {
      console.log(keys)
      return (
           <div className={classes.Employee}>
-               {keys.map(key => <p><span>{key.toUpperCase()}:</span> 
-                                   <span>{employee[key]}</span></p>)}
+               <div className={classes.Data}>
+                    {keys.map(key => <p><span>{key.toUpperCase()}:</span> 
+                                        <span>{employee[key]}</span></p>)}
+               </div>
+               <div>
+                    <img src={employeeImage} alt='Employee Image'/>
+               </div>
           </div>
      )
 }

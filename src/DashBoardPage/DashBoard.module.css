@@ -1,4 +1,10 @@
 .List {
      color: black;
      display: flex;
+     margin-top: 100px;
+}
+
+.Button {
+     margin: 10px;
+     float: right;
 }

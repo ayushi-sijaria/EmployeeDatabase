@@ -12,10 +12,12 @@ const LoginPage = () => {
      const authenticateHandler = (enteredUsername, enteredPassword) => {
           if(enteredUsername===username && enteredPassword===password)
           {
+               localStorage.setItem('authenticated','true')
                history.replace('/employees')
           }
           else 
           {
+               localStorage.setItem('authenticated','false')
                seterror(true)
           }        
      }

@@ -4,8 +4,13 @@
      margin: 20px;
      border-radius: 5px;
      text-align: left;
-     margin-left: 50px;
+     margin-left: 30px;
+     display: flex;
      
+}
+
+.Data {
+     width: 400px;
 }
 
 .Employee p{
@@ -19,6 +24,12 @@
      color: black;
      display: inline-block;
      min-width: 100px;
+}
+
+.Employee img {
+     height: 100%;
+     width: 100%;
+     
 }
 
 .Employee:hover
