@@ -17,15 +17,13 @@ const DashBoard = () => {
           if(counter>1)
           setCounter(counter-1)
      }
+     const getPaginatedData = (data, counter) =>
+     {
+          return data.slice(counter*2-2,counter*2)
+     }
      return (
           <div className={classes.List}>
-               {EmployeeData.slice(counter*2-2,counter*2).map((e) => <EmployeeRecord key={e.id} 
-                                                        id={e.id}
-                                                        name={e.name}
-                                                        age={e.age}
-                                                        gender={e.gender}
-                                                        email={e.email}
-                                                        phoneNo={e.phoneNo}/>)}
+               {getPaginatedData(EmployeeData, counter).map((e) => <EmployeeRecord key={e.id} emp={e}/>)}
                <PaginationComponent onPrev={decCounterHandler} 
                                     onNext={incCounterHandler}/>
           </div>
