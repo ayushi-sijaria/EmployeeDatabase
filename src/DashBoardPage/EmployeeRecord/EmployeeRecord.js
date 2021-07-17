@@ -9,11 +9,11 @@ const EmployeeRecord = (props) => {
      return (
           <div className={classes.Employee}>
                <div className={classes.Data}>
-                    {keys.map(key => <p><span>{key.toUpperCase()}:</span> 
+                    {keys.map(key => <p><span classname={classes.Title}>{key.charAt(0).toUpperCase()+key.substring(1)}:</span> 
                                         <span>{employee[key]}</span></p>)}
                </div>
                <div>
-                    <img src={employeeImage} alt='Employee Image'/>
+                    <img src={employeeImage} alt='Not Found'/>
                </div>
           </div>
      )

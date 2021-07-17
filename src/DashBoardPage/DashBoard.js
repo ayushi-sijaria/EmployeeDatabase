@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import EmployeeData from '../data/data'
-import LoginPage from '../LoginPage/LoginPage'
 import PaginationComponent from '../UI/Pagination/Pagination'
 import classes from './DashBoard.module.css'
 import EmployeeRecord from './EmployeeRecord/EmployeeRecord'
@@ -11,7 +10,6 @@ import EmployeeRecord from './EmployeeRecord/EmployeeRecord'
 const DashBoard = () => {
      const history = useHistory()
      const [counter, setCounter] = useState(1)
-     const [authenticated, setauthenticated] = useState(localStorage.getItem('authenticated'))
      const maxCounter = 3
      const incCounterHandler = () =>
      {
@@ -29,7 +27,6 @@ const DashBoard = () => {
      }
      const logoutHandler = () =>
      {
-          setauthenticated(false)
           localStorage.setItem('authenticated', 'false')
           history.replace('/')
      }
